@@ -3,6 +3,10 @@
 nmap="$1"
 dnsx="$2"
 
+# ./vhost-kit.sh nmap.xml dnsx-output.txt > vhosts.txt
+# cat vhosts.txt | httpx
+# axiom-scan vhosts.txt -m httpx -o http.txt
+
 tmp="$RANDOM"
 mkdir -p "$tmp"
 cat "$dnsx" | tr -d '[]' > "$tmp/dns.txt"
